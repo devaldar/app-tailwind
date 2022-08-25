@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "app/build/js",
+        "sourceMap": false,
+        "experimentalDecorators": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "target": "es5",
+        "lib": ["es2015", "DOM"],
+        "types": ["@types/jest", "jest", "node", "@testing-library/jest-dom"],
+        "noEmit": true,
+        "allowJs": true,
+        "baseUrl": "./src"
+    },
+    "include":["src"],
+    "exclude": ["node_modules", "**/*.spec.ts"],
+    
+  }
