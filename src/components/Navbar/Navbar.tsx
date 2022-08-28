@@ -1,36 +1,108 @@
-import React from 'react'
-import {
-    CloudUploadIcon,
-    DatabaseIcon,
-    PaperAirplaneIcon,
-    ServerIcon,
-} from '@heroicons/react/solid'
+import React, { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-import bgImg from 'assets/cyber-bg.png'
-// import img from 'assets/'
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
 export const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const handleClick = () => setNav(!nav);
+
+  const handleClose = () => setNav(!nav);
+  // const menuItems = ["home", "about", "support", "platforms", "pricing"];
+  const menuItems = [
+    { name: "home" },
+    { name: "about", offset: -200 },
+    { name: "support" },
+    { name: "platforms" },
+    { name: "pricing" },
+  ];
   return (
-    <div className='w-screen h-[80px] z-10 bg-zinc-200  fixed drop-shadow-lg'> <div className='grid md:grid-cols-2 max-w-[1240px] m-auto'>
-    <div className='flex flex-col justify-center md:items-start w-full px-2 py-8'>
-        <p className='text-2xl'>Unique Sequencing & Production</p>
-        <h1 className='py-3 text-5xl md:text-7xl font-bold'>Cloud Management</h1>
-        <p className='text-2xl'>This is our Tech brand.</p>
-        <button className='py-3 px-6 sm:w-[60%] my-4'>Get Started</button>
-    </div>
-    <div>
-        <img className='w-full' src={bgImg} alt="/" />
-    </div>
-    <div className='absolute flex flex-col py-8 md:min-w-[760px] bottom-[5%]
-    mx-1 md:left-1/2 transform md:-translate-x-1/2 bg-zinc-200
-    border border-slate-300 rounded-xl text-center shadow-xl'>
-        <p>Data Services</p>
-        <div className='flex justify-between flex-wrap px-4'>
-            <p className='flex px-4 py-2 text-slate-500'><CloudUploadIcon className='h-6 text-indigo-600' /> App Security</p>
-            <p className='flex px-4 py-2 text-slate-500'><DatabaseIcon className='h-6 text-indigo-600' /> Dashboard Design</p>
-            <p className='flex px-4 py-2 text-slate-500'><ServerIcon className='h-6 text-indigo-600' /> Cloud Data</p>
-            <p className='flex px-4 py-2 text-slate-500'><PaperAirplaneIcon className='h-6 text-indigo-600' /> API</p>
+    <div className="w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg">
+      <div className="flex items-center justify-between w-full h-full px-2">
+        <div className="flex items-center">
+          <h1 className="mr-4 text-3xl font-bold sm:text-4xl">BRAND.</h1>
+          <ul className="hidden md:flex">
+            {menuItems.map(({ name, offset }) => (
+              <li
+                className="transition-colors duration-300 ease-in first-letter:uppercase hover:cursor-pointer hover:text-blue-500"
+                key={name}
+              >
+                <Link to={name} smooth={true} duration={500} offset={offset}>
+                  {name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
+        <div className="hidden pr-4 md:flex">
+          <button className="mr-4 text-black bg-transparent border-none">
+            Sign In
+          </button>
+          <button className="px-8 py-3">Sign Up</button>
+        </div>
+        <div className="mr-4 md:hidden" onClick={handleClick}>
+          {!nav ? <Bars3Icon className="w-5" /> : <XMarkIcon className="w-5" />}
+        </div>
+      </div>
+
+      <ul className={!nav ? "hidden" : "absolute bg-zinc-200 w-full px-8"}>
+        <li className="w-full border-b-2 border-zinc-300">
+          <Link onClick={handleClose} to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className="w-full border-b-2 border-zinc-300">
+          <Link
+            onClick={handleClose}
+            to="about"
+            smooth={true}
+            offset={-200}
+            duration={500}
+          >
+            About
+          </Link>
+        </li>
+        <li className="w-full border-b-2 border-zinc-300">
+          <Link
+            onClick={handleClose}
+            to="support"
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            Support
+          </Link>
+        </li>
+        <li className="w-full border-b-2 border-zinc-300">
+          <Link
+            onClick={handleClose}
+            to="platforms"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Platforms
+          </Link>
+        </li>
+        <li className="w-full border-b-2 border-zinc-300">
+          <Link
+            onClick={handleClose}
+            to="pricing"
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            Pricing
+          </Link>
+        </li>
+
+        <div className="flex flex-col my-4">
+          <button className="px-8 py-3 mb-4 text-indigo-600 bg-transparent">
+            Sign In
+          </button>
+          <button className="px-8 py-3">Sign Up</button>
+        </div>
+      </ul>
     </div>
-</div></div>
-  )
-}
+  );
+};
