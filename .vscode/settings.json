@@ -2,5 +2,12 @@
     "cSpell.words": [
         "heroicons",
         "tailwindcss"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "tailwindCSS.experimental.classRegex": [
+        "tw.*[ ]{0,}=[ ]{0,}[\n\r]?[ ]{0,}[\"|']([^`;'\"]*)[\"|']",
+        "customClass.*[ ]{0,}=[ ]{0,}[\"|']([^`]*)[\"|']",
+        "classnames({[\"|']([^`]*)[\"|']*})",
+        // "tailClass.*[ ]{0,}=[ ]{0,}[\"|']([a-zA-Z0-9: ]*)[\"|']"
+    ],
 }
