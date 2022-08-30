@@ -9,9 +9,9 @@ module.exports = {
 			xl: '1280px',
 			'2xl': '1536px',
 		},
-		// fontFamily: {
-		// 	sans: ['Montserrat', 'sans-serif'],
-		// },
+		fontFamily: {
+			sans: ['Work Sans,Roboto', 'sans-serif'],
+		},
 	},
 	plugins: [],
 };

@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-	li {
-		@apply p-4;
-	}
-
 	/* button {
 		@apply text-white rounded-md bg-rose-500 hover:bg hover:text-indigo-600;
 	} */
 }
 
 body {
-	background: #0f0f0f;
+	background: #12141b;
 	color: white;
 }

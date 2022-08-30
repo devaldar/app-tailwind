@@ -7,21 +7,34 @@ import {
 } from '@heroicons/react/24/solid';
 
 import bgImg from '../assets/cyber-bg.png';
+import { Button } from './Shared/Button';
 
 export const Hero: React.FC<{ name: string }> = () => {
 	return (
-		<div id="home" className="flex flex-col justify-between w-full h-screen ">
-			<div className="grid md:grid-cols-2 max-w-[1240px] m-auto">
-				<div className="flex flex-col justify-center w-full px-2 py-8 md:items-start">
-					<p className="text-2xl">Unique Sequencing & Production</p>
-					<h1 className="py-3 text-5xl font-bold md:text-7xl">Cloud Management</h1>
-					<p className="text-2xl">This is our Tech brand.</p>
-					<button className="py-3 px-6 sm:w-[60%] my-4">Get Started</button>
+		<div id="home" className="flex flex-col justify-between w-full">
+			<div className="flex  max-w-[75%] m-auto pt-10 px-2 flex-wrap md:flex-nowrap">
+				<div className="flex flex-col items-center justify-center w-full px-2 py-8 text-center md:items-start md:text-start">
+					{/* <p className="text-2xl">Unique Sequencing & Production</p> */}
+					<h1 className="py-3 text-4xl font-bold lg:text-5xl">
+						Get{' '}
+						<span className="text-transparent bg-red-600 bg-cover bg-gradient-to-tr from-purple-500 to-pink-500 bg-clip-text">
+							Cloud Certified
+						</span>{' '}
+						With Ease
+					</h1>
+					<p className="text-md">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore error
+						dignissimos, molestiae ipsum optio neque.
+					</p>
+					{/* <button className="mt-4 font-semibold text-blue-500 transition-colors hover:text-blue-600">
+						Get Started
+					</button> */}
+					<Button twClasses="mt-4 ">Get Started</Button>
 				</div>
 				<div>
 					<img className="w-full" src={bgImg} alt="/" />
 				</div>
-				<div
+				{/* <div
 					className="absolute flex flex-col py-8 md:min-w-[760px] bottom-[5%]
             mx-1 md:left-1/2 transform md:-translate-x-1/2 bg-zinc-200
             border border-slate-300 rounded-xl text-center shadow-xl"
@@ -41,7 +54,7 @@ export const Hero: React.FC<{ name: string }> = () => {
 							<PaperAirplaneIcon className="h-6 text-indigo-600" /> API
 						</p>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

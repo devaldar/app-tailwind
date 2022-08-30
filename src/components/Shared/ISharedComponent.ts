@@ -1,3 +1,3 @@
-export interface IShareComponent {
-	extraClasses?: string;
+export interface IShareComponent extends React.HTMLAttributes<HTMLElement> {
+	twClasses?: string;
 }
