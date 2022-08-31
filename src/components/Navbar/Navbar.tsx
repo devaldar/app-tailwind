@@ -18,14 +18,14 @@ export const Navbar = () => {
     { name: "pricing" },
   ];
   return (
-    <div className="w-screen h-[80px] px-4 z-10 flex items-center justify-center border-b-white border-opacity-30 bg-transparent">
+    <div className="h-[80px] px-4 z-10 flex items-center justify-center border-b-white border-opacity-30 bg-transparent">
       <div className="flex items-center justify-between w-[1400px] h-full px-2">
         <h1 className="mr-4 text-xl font-bold">TestMaster</h1>
         <div className="flex items-center">
           <ul className="hidden text-sm md:flex">
             {menuItems.map(({ name, offset }) => (
               <li
-                className="px-3 transition-colors duration-300 ease-in first-letter:uppercase hover:cursor-pointer hover:text-blue-500"
+                className="px-3 transition-colors duration-300 ease-in first-letter:uppercase hover:cursor-pointer hover:text-rose-300 "
                 key={name}
               >
                 <Link to={name} smooth={true} duration={500} offset={offset}>
