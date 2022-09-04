@@ -14,11 +14,12 @@ export const Button: React.FC<IButtonProps> = ({
 	children,
 	twClasses,
 }) => {
-	const twSecondary = 'bg-transparent hover:text-rose-500 ';
+	const twSecondary = 'bg-stone-900 hover:text-black hover:border-stone-900 border-[1px] ';
 	const twPrimary = ' bg-rose-500 border-none rounded-md hover:bg-rose-700 ';
 
-	const twHoverBlocks =
-		'absolute w-1/3 h-full scale-150 bg-yellow-500 rounded-3xl translate-y-[150%] transition-all duration-700 group-hover:translate-y-0';
+	const twHoverBlocks = `absolute w-1/3 h-full scale-150 ${
+		isSecondary ? 'bg-white ' : 'bg-yellow-500'
+	} rounded-3xl translate-y-[150%] transition-all duration-700 group-hover:translate-y-0`;
 	return (
 		<div
 			className={`group px-4 py-2 transition-colors rounded-md z-10 font-semibold relative cursor-pointer ${
