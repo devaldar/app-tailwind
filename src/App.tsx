@@ -7,6 +7,7 @@ import { Companies } from 'components/Companies';
 import { Content } from 'components/Content';
 import { Form } from 'components/Form';
 import { Interest } from 'components/Interest';
+import { Footer } from 'components/Footer';
 
 const App = () => {
 	return (
@@ -39,8 +40,9 @@ const App = () => {
 					'You will be able to prepare yourself for a variety of certifications from a single subscription.',
 				]}
 			/>
-			<Form />
 			<Interest />
+
+			<Footer />
 			{/* Exams Include */}
 			{/* Services */}
 			{/* Some Companies */}
@@ -48,7 +50,6 @@ const App = () => {
 			{/* Reviews */}
 			{/* Form */}
 			{/* Pricing */}
-			<div className="h-[400vh]"></div>
 		</>
 	);
 };

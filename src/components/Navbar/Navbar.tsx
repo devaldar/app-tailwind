@@ -37,7 +37,7 @@ export const Navbar = () => {
 				</div>
 				<div className="items-center hidden pr-4 md:flex">
 					<Button title="Log in" isSecondary={true} />
-					<Button title="Sign Up" />
+					{/* <Button title="Sign Up" /> */}
 				</div>
 				<div className="mr-4 md:hidden" onClick={handleClick}>
 					{!nav ? <Bars3Icon className="w-5" /> : <XMarkIcon className="w-5" />}

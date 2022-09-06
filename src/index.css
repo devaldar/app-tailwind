@@ -11,4 +11,5 @@
 body {
 	background: #12141b;
 	color: white;
+	overflow-x: hidden;
 }
