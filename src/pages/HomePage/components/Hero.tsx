@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import bgImg from '../assets/final2.png';
-import { Button } from './Shared/Button';
+import { Button } from 'components/Shared';
 
 export const Hero: React.FC<{ name: string }> = () => {
 	const animation = useAnimation();

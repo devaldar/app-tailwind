@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-
-import { SectionHeading } from './Shared/SectionHeading';
+import { SectionHeading } from 'components/Shared/SectionHeading';
 import { servicesData } from 'data/data';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';

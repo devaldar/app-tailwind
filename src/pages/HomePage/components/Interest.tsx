@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Button } from './Shared/Button';
+import { Button } from 'components/Shared/Button';
 import { InboxArrowDownIcon } from '@heroicons/react/24/outline';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';

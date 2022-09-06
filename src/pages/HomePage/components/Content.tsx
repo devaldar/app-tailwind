@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { Button } from './Shared/Button';
-import { IShareComponent } from './Shared/ISharedComponent';
+import { Button } from 'components/Shared';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-interface IContentProps extends IShareComponent {
+interface IContentProps {
 	paragraphs: string[];
 	heading: string;
 	buttonText: string;
@@ -23,12 +22,6 @@ export const Content: React.FC<IContentProps> = ({
 	isReverse = false,
 	top,
 }) => {
-	const initial = {
-		opacity: 0,
-		scale: 0.2,
-		y: 50,
-	};
-
 	const animation = useAnimation();
 
 	const { ref, inView } = useInView({
