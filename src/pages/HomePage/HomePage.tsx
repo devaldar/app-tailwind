@@ -8,6 +8,7 @@ import { Interest } from './components/Interest';
 import { Footer } from './components/Footer';
 
 export const HomePage = () => {
+	console.log('test');
 	return (
 		<>
 			{/* <Navbar /> */}

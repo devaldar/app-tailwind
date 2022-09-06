@@ -1,14 +1,25 @@
 import React from 'react';
 import { Navbar } from 'components/Navbar';
 
-import { BrowserRouter, Routes, Router } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { HomePage } from 'pages/HomePage';
+import { LoginPage } from 'pages/LoginPage';
+import { PricingPage } from 'pages/PricingPage';
 
 const App = () => {
 	return (
 		<>
-			<Navbar />
-			<HomePage />
+			<BrowserRouter>
+				<Routes>
+					<Route element={<Navbar />}>
+						<Route path="/" element={<HomePage />} />
+						<Route path="/pricing" element={<PricingPage />} />
+					</Route>
+					<Route path="/login" element={<LoginPage />} />
+					<Route path="*" element={<Navigate to="/" />} />
+				</Routes>
+			</BrowserRouter>
+
 			{/* Exams Include */}
 			{/* Services */}
 			{/* Some Companies */}

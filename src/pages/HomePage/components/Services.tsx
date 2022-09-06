@@ -14,7 +14,7 @@ export const Services = () => {
 	const animation = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: 0.6,
+		threshold: 0.4,
 	});
 
 	useEffect(() => {
